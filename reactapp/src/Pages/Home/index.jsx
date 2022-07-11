@@ -3,12 +3,12 @@ import './styles.css'
 import Card from '../../components/Card'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [userName, setUserName] = useState('');
 
   return (
     <div className='container'>
-      <h1>Lista de presença</h1>
-      <input type="text" placeholder='Digite o nome...' />
+      <h1>Lista de presença: {userName}</h1>
+      <input type="text" placeholder='Digite o nome...' onChange={e => setUserName(e.target.value)} />
       <button type="submit">Adicionar</button>
 
     <Card name="Gustavo" time="01:00:52" />
